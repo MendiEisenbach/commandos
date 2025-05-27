@@ -11,19 +11,18 @@ namespace commandos.model
         private string Name {  get; set; }
         public string CodeName { get; set; }
         public string[] Tools { get; set; } = new string[] { "hammer", "chisel", "rope", "bag", "water bottle" };
-        public string Status { get; set; }
+        public string Status { get; set; } = "unknown";
 
-        public Commandos(string name, string codeName,  string status)
+        public Commandos(string name, string codeName)
         {
             Name = name;
             CodeName = codeName;
-            Status = status;
         }
 
         public void SayName()
         {
             Console.WriteLine("enter your rank: ");
-            string input = Console.ReadLine();
+            string input = Console.ReadLine()!;
 
             if (input == "GENERAL")
             {
@@ -51,9 +50,12 @@ namespace commandos.model
             Status = "hideing";
         }
 
-        public void Attac()
+        public virtual void Attac()
         {
             Console.WriteLine($"Commando {CodeName} Attacks");
+            Status = "Attac";
+
         }
+
     }
 }

@@ -7,21 +7,19 @@ namespace commandos
     {
         static void Main(string[] args)
         {
-            Weapon Weapon1 = new Weapon("M16", "refael", 20);
-            Console.WriteLine(Weapon1.NumberOfBalls);
-            Weapon1.Shoot();
-            Console.WriteLine(Weapon1.NumberOfBalls);
+            Commandos[] commandosList = {
 
-            Commandos commando1 = new Commandos("ziv", "shampania", "stand");
-            Console.WriteLine(commando1.Status);
-            commando1.Walk();
-            Console.WriteLine(commando1.Status);
+                 new AirCommando("Noam", "Lump"),
+                 new SeaCommando("Or", "Gal"),
+                 new Commandos("Ziv", "Shampania")
 
-            commando1.SayName();
 
-            Console.WriteLine(commando1.CodeName);
-            commando1.CodeName = "soda";
-            Console.WriteLine(commando1.CodeName);
+            };
+
+            for (int i = 0; i < commandosList.Length; i++)
+            {
+                commandosList[i].Attac();
+            }
 
 
         }
