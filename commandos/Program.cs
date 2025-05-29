@@ -7,19 +7,38 @@ namespace commandos
     {
         static void Main(string[] args)
         {
-            Commandos[] commandosList = {
+            //Commandos[] commandosList = {
 
-                 new AirCommando("Noam", "Lump"),
-                 new SeaCommando("Or", "Gal"),
-                 new Commandos("Ziv", "Shampania")
+            //     new AirCommando("Noam", "Lump"),
+            //     new SeaCommando("Or", "Gal"),
+            //     new Commandos("Ziv", "Shampania")
 
 
-            };
+            //};
 
-            for (int i = 0; i < commandosList.Length; i++)
-            {
-                commandosList[i].Attac();
-            }
+            //for (int i = 0; i < commandosList.Length; i++)
+            //{
+            //    commandosList[i].Attac();
+            //}
+
+            //Enemy enemy1 = new Enemy("amy");
+
+            Enemy enemy2 = EnemyFactory.CreateEnemy("abu-ally");
+
+            //enemy1.Scream();
+            //enemy2.Scream();
+
+            Game.StartCreateCommandos();
+
+
+            //foreach (var Commandos in CommandosFactory.CommandoFactoryList)
+            //{
+            //    Console.WriteLine(Commandos.CodeName);
+            //}
+
+            
+
+            
 
 
         }
